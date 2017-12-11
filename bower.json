@@ -1,0 +1,21 @@
+{
+  "name": "table-to-csv",
+  "main": "tableToCSV.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/snake404/tableToCSV",
+  "authors": [
+    "Cristian Alanis <snake404@gmail.com>"
+  ],
+  "description": "HTML table to CSV file implementation",
+  "keywords": [
+    "csv",
+    "html table",
+    "tableToCSV.js",
+    "tableToCSV"
+  ],
+  "license": "Apache License 2.0",
+  "ignore": [
+      "LICENSE",
+      "*.md"
+  ]
+}
