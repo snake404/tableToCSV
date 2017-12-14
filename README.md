@@ -19,7 +19,7 @@ All you have to do, is to add the tableToCSV.js file into your main HTML (maybe 
 And then, call the function (you can add the action in a button for example):
 
 ```javascript
-tableToCSV.convertToTable(idOfTheTable);
+tableToCSV.convertToCSV(idOfTheTable);
 ```
 
 At the end of the execution, you will see a window just to save your file in CSV format
@@ -75,7 +75,7 @@ HTML file (angularJS example)
 Controller function
 ```javascript
 $scope.exportData = function(){
-    tableToCSV.convertToTable(document.getElementById("idOfTheTable"));
+    tableToCSV.convertToCSV(document.getElementById("idOfTheTable"));
 };
 ```
 
