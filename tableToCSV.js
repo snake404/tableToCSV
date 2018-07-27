@@ -7,9 +7,9 @@
  */
 var tableToCSV = {
 
-    convertToCSV: function(tableId){
+    convertToCSV: function(tableId, fileName){
         var table = document.getElementById(tableId);
-        var result = "data:text/csv;charset=utf-8,";
+        var result = "data:text/csv;charset=utf-8,filename=" + fileName + ",";
         var sizeRows = table.children[0].childNodes[1].cells.length;
 
         for(var i = 0, row; row = table.rows[i]; i++){
@@ -26,7 +26,15 @@ var tableToCSV = {
         }
 
         var encodedUri = encodeURI(result);
-        window.open(encodedUri);
+        var link = document.createElement("a");
+        link.href = encodedUri;
+
+        link.style = "visibility:hidden";
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
 }
